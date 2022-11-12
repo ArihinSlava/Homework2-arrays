@@ -17,7 +17,25 @@ public class Main {
         for (int i = 0; i < generateRandomArray().length; i++) {
             if (i == generateRandomArray().length - 1)
                 System.out.println("Сумма трат за месяц составила " + IntStream.of(generateRandomArray()).sum() + " рублей ");
-            
+
         }
+        System.out.println(Arrays.toString(arr));
+        int maxExpense = 0;
+        int minExpense = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxExpense) {
+                maxExpense = arr[i];
+            }
+            if (arr[i] < minExpense) {
+                minExpense = arr[i];
+            }
+        }
+        System.out.println("Максимальная сумма трат за день составила " + maxExpense + " рублей ");
+        System.out.println("Минимальная сумма трат за день составила " + minExpense + " Рублей ");
     }
 }
+
+
+
+
+
