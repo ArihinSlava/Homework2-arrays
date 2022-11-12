@@ -12,6 +12,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        //Задание 1
+        System.out.println(" Задание 1");
         int[] arr = generateRandomArray();
         System.out.println(Arrays.toString(arr));
         for (int i = 0; i < generateRandomArray().length; i++) {
@@ -19,6 +21,8 @@ public class Main {
                 System.out.println("Сумма трат за месяц составила " + IntStream.of(generateRandomArray()).sum() + " рублей ");
 
         }
+        //Задание 2
+        System.out.println(" Задание 2");
         System.out.println(Arrays.toString(arr));
         int maxExpense = 0;
         int minExpense = arr[0];
@@ -32,8 +36,21 @@ public class Main {
         }
         System.out.println("Максимальная сумма трат за день составила " + maxExpense + " рублей ");
         System.out.println("Минимальная сумма трат за день составила " + minExpense + " Рублей ");
+
+        //Задание 3
+        System.out.println(" Задание 3");
+        System.out.println(Arrays.toString(arr));
+        double allExpense = 0;
+        for (int j : arr) {
+            allExpense += j;
+        }
+        System.out.println("Средняя сумма трат за месяц составила " + allExpense / 30 + " рублей ");
     }
 }
+
+
+
+
 
 
 
