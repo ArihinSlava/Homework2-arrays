@@ -14,19 +14,18 @@ public class Main {
     public static void main(String[] args) {
         //Задание 1
         System.out.println(" Задание 1");
-        int[] arr = generateRandomArray();
-        System.out.println(Arrays.toString(arr));
-        for (int i = 0; i < generateRandomArray().length; i++) {
-            if (i == generateRandomArray().length - 1)
-                System.out.println("Сумма трат за месяц составила " + IntStream.of(generateRandomArray()).sum() + " рублей ");
+        int [] arr = generateRandomArray();
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i]; }
+                System.out.println("Сумма трат за месяц составила " + sum + " рублей ");
 
-        }
+
         //Задание 2
         System.out.println(" Задание 2");
-        System.out.println(Arrays.toString(arr));
-        int maxExpense = 0;
+        int maxExpense = arr[0];
         int minExpense = arr[0];
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxExpense) {
                 maxExpense = arr[i];
             }
@@ -39,12 +38,8 @@ public class Main {
 
         //Задание 3
         System.out.println(" Задание 3");
-        System.out.println(Arrays.toString(arr));
-        double allExpense = 0;
-        for (int j : arr) {
-            allExpense += j;
-        }
-        System.out.println("Средняя сумма трат за месяц составила " + allExpense / 30 + " рублей ");
+        double allExpenses = sum / 30;
+        System.out.println("Средняя сумма трат за месяц составила " + allExpenses + " рублей ");
 
         //Задача 4
         System.out.println(" Задача 4 ");
